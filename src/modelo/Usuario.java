@@ -15,8 +15,6 @@ public class Usuario implements Serializable{
 	
 	public Usuario() {}
 	
-	
-	
 	public Usuario(String userName, String id, String password) {
 		super();
 		this.userName = userName;

@@ -1,7 +1,24 @@
 package dao;
 
-public abstract class Archivo {
+public class Archivo {
 	
-	public abstract String getContenido();
+	private String nombreArchivo;
+	
+	private String contenido;
+	
+	public String getContenido() {
+	  return contenido;	
+	}
+	
+	public void setContenido(String contenido) {
+		this.contenido = contenido;
+	}
 
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
+	}
 }

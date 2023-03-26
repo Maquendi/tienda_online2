@@ -1,8 +1,9 @@
 package dao;
 
-public interface LectorDeArchivo {
-	Object[] leer(String nombreArchivo, DeSerializer deSerializer);
-  
+public interface EscritorDeArchivo {
+	
+	void crear(Archivo archivo);
+	
 	default String getBasePath() {
 		final String basePath = System.getProperty("user.dir");
 		return basePath + "\\" + "archivos\\";
