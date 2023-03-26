@@ -10,6 +10,13 @@ public class Cliente extends Persona implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private String cuentaBancaria;
+	
+	public Cliente() {}
+
+	public Cliente(String cuentaBancaria) {
+		super();
+		this.cuentaBancaria = cuentaBancaria;
+	}
 
 	public String getCuentaBancaria() {
 		return cuentaBancaria;

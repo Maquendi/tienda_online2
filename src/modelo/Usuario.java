@@ -13,6 +13,19 @@ public class Usuario implements Serializable{
 	private String id;
 	private String password;
 	
+	public Usuario() {}
+	
+	
+	
+	public Usuario(String userName, String id, String password) {
+		super();
+		this.userName = userName;
+		this.id = id;
+		this.password = password;
+	}
+
+
+
 	public String getUserName() {
 		return userName;
 	}

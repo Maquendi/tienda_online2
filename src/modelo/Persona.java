@@ -16,6 +16,21 @@ public class Persona implements Serializable{
 	private String apellidoPaterno;
 	private LocalDate fechaDeNacimiento;
 	private String sexo;
+	
+	public Persona() {}
+	
+	
+	public Persona(String email, String id, String nombre, String apellidoMaterno, String apellidoPaterno,
+			LocalDate fechaDeNacimiento, String sexo) {
+		super();
+		this.email = email;
+		this.id = id;
+		this.nombre = nombre;
+		this.apellidoMaterno = apellidoMaterno;
+		this.apellidoPaterno = apellidoPaterno;
+		this.fechaDeNacimiento = fechaDeNacimiento;
+		this.sexo = sexo;
+	}
 	public String getEmail() {
 		return email;
 	}

@@ -13,6 +13,17 @@ public class Producto implements Serializable{
 	private String id;
 	private CategoriaProducto categoria;
 	
+	public Producto() {}
+	
+	public Producto(String descripcion, String id, CategoriaProducto categoria) {
+		super();
+		this.descripcion = descripcion;
+		this.id = id;
+		this.categoria = categoria;
+	}
+
+
+
 	public String getDescripcion() {
 		return descripcion;
 	}

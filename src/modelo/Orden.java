@@ -17,6 +17,19 @@ public class Orden implements Serializable{
 	private LocalDate fechaOrden;
 	
 	private Producto[] productos;
+	
+	public Orden() {}
+	
+
+
+	public Orden(String id, LocalDate fechaOrden, Producto[] productos) {
+		super();
+		this.id = id;
+		this.fechaOrden = fechaOrden;
+		this.productos = productos;
+	}
+
+
 
 	public String getId() {
 		return id;

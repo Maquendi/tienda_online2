@@ -9,6 +9,16 @@ public class DetalleOrden implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private boolean estaDisponible;
+	
+	public DetalleOrden() {}
+	
+
+	public DetalleOrden(boolean estaDisponible) {
+		super();
+		this.estaDisponible = estaDisponible;
+	}
+
+
 
 	public boolean isEstaDisponible() {
 		return estaDisponible;

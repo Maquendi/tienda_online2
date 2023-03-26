@@ -19,6 +19,21 @@ public class DetalleProducto implements Serializable{
     private double largo;
     
     private boolean tieneDescuento;
+    
+    public DetalleProducto() {}
+    
+    
+    
+
+	public DetalleProducto(String color, String textura, double ancho, double largo, boolean tieneDescuento) {
+		super();
+		this.color = color;
+		this.textura = textura;
+		this.ancho = ancho;
+		this.largo = largo;
+		this.tieneDescuento = tieneDescuento;
+	}
+
 
 	public String getColor() {
 		return color;
