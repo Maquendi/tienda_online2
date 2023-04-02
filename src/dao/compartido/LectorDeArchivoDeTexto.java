@@ -1,4 +1,4 @@
-package dao;
+package dao.compartido;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,6 +7,8 @@ import java.util.List;
 
 public class LectorDeArchivoDeTexto implements LectorDeArchivo {
 
+	
+	
 	@Override
 	public Object[] leer(String nombreArchivo, DeSerializer deSerializer) {
 		

@@ -3,6 +3,9 @@ package modelo;
 import java.io.Serializable;
 import java.util.Objects;
 
+
+//pojo -->> plain old java object....
+//Dto -- >>  data transfer object....
 public class Usuario implements Serializable{
 
 	/**

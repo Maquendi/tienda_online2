@@ -1,6 +1,6 @@
 package dao.persona;
 
-import dao.Serializador;
+import dao.compartido.Serializador;
 import modelo.Persona;
 
 public class PersonSerializer implements Serializador {

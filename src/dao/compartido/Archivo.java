@@ -1,4 +1,8 @@
-package dao;
+package dao.compartido;
+
+
+// pojo -->> plain old java object....
+// Dto -- >>  data transfer object....
 
 public class Archivo {
 	

@@ -1,4 +1,4 @@
-package dao;
+package dao.compartido;
 
 import java.io.BufferedWriter;
 import java.io.File;

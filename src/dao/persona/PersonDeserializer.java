@@ -2,7 +2,8 @@ package dao.persona;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import dao.DeSerializer;
+
+import dao.compartido.DeSerializer;
 import modelo.Persona;
 
 public class PersonDeserializer implements DeSerializer {

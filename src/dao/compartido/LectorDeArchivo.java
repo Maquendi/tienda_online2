@@ -1,4 +1,4 @@
-package dao;
+package dao.compartido;
 
 public interface LectorDeArchivo {
 	Object[] leer(String nombreArchivo, DeSerializer deSerializer);
