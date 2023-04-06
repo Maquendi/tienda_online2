@@ -18,3 +18,11 @@ d6e29d50-289c-4f37-8862-0f3d2e161b4f,Diana,Beltran,Sanchez,F,2006-12-06,dianabs4
 23b9ea32-6e11-405a-817e-ff93a069e16e,diana,beltran,sanchez,F,2006-12-06,dianabs@gmail.com
 32e303a8-75a5-42b7-8c9f-2a31d819e389,diego,feliz,guillen,M,2010-05-01,diegoblox@gmail.com
 fa6f3c6c-2bdb-4c6c-8733-1bf1d36c6e58,yesenia,feliz,guillen,F,2002-03-12,yessi87@gmail.com
+a65ccebd-a194-474c-83e8-1a95bff0bf1e,Maquendi,Beltran,Novas,M,1989-04-25,mbn04251989@gmail.com
+e44239d4-2632-405d-9184-7a4df7478071,hernandez,hipolito,mejia,M,1980-02-15,hermandezhiposito@hotmail.com
+dd0ab5f3-cd63-4df1-802b-0267c4f3b378,maq,bel,novas,m,1989-04-25,neltran@tran.do
+e6283c3b-0259-41e9-a68c-9215369417fc,,am,f,m,2014-01-24,wed
+1b6ff0a3-bcae-43a4-88af-5000ed244094,,hel,df,sdf,2010-06-15,sdf
+389dfff1-843a-4920-8a5b-55128eb97c14,Donald,Trump,Trumpet,M,1960-02-16,donaldtrump@trump.org
+ca39e447-b891-4a3c-83dd-201af5527fc6,Hilary,Clington,De clinton,F,1952-01-14,hilarycligton@clington.com
+ff9c88bd-d44f-448c-a947-d1ab11fe1ee1,Maquendi,Beltran,Novas,M,2010-10-24,mbn@maquendi.com

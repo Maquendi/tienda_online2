@@ -1,52 +1,60 @@
 package app;
 
-import java.time.LocalDate;
 import java.util.Scanner;
-import java.util.UUID;
 
 import app.commandline.PersonaCommandLine;
-import modelo.Persona;
-import service.PersonRegistrationService;
 
 public class CommandLineApplication {
 
-	public static void init() throws Exception {
-		
-		mostrarMenu();
-		
-	}
-	
-	public static void mostrarMenu() throws Exception {
-		
-		int opcion;
-		
+	public static void init() {
 		Scanner scanner = new Scanner(System.in);
-		
-		do {
-			
-			System.out.print("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir" );
-			
-			opcion = scanner.nextInt();
-			
-		    if(opcion==1) {
-		    	
-			PersonaCommandLine.registrar();
-			
-		    }
-		    
-			if(opcion==2) {
+		int opcionSeleccionado;
+		try {
+
+			do {
 				
-				scanner.close();
+				limpiarConsola();
 				
-				throw new Exception("Esta funcion aun no esta implementada");
-						
-			}
+				opcionSeleccionado = mostrarMenu(scanner);
+				
+			} while (opcionSeleccionado != 3);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		scanner.close();
+	}
+
+	// checked exception.
+	public static int mostrarMenu(Scanner scanner) throws Exception {
+
+		int opcion;
+
+		System.out.println("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir");
+
+		opcion = Integer.parseInt(scanner.nextLine());
+
+		if (opcion == 1) {
+
+			PersonaCommandLine.registrar(scanner);
+		}
+
+		if (opcion == 2) {
 			
-			if(opcion==3) {
-				
-				//scanner.close();
-			}
-		}while(opcion!=3);
+			throw new Exception("Esta funcion aun no esta implementada");
+		}
+
+		if (opcion == 3) {
+			 System.exit(0);
+		}
+
+		return opcion;
 	}
 	
+	
+	public static void limpiarConsola() {  
+		// implementar limpiar consola.
+
+	}  
+
 }
