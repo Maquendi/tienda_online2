@@ -39,8 +39,10 @@ public class PersonaCommandLine {
 	    String fechaNacimeinto = scanner.nextLine();
 	    
 	    Persona persona = new Persona();
+	    
+	    String id=UUID.randomUUID().toString();
 	   
-	    persona.setId(UUID.randomUUID().toString());
+	    persona.setId(id);
 	    persona.setNombre(nombre);
 	    persona.setApellidoPaterno(appelidoPaterno);
 	    persona.setApellidoMaterno(appelidoMaterno);
@@ -64,7 +66,7 @@ public class PersonaCommandLine {
 	    	
 	    	// llamar 
 	    	
-	    	crearUsuario();
+	    	crearUsuario(id);
 	    	
 	    }catch(NumberFormatException  e) {
 	    	System.out.println("El valor de la fecha de nacimiento no es valido.");
@@ -73,7 +75,7 @@ public class PersonaCommandLine {
 	    scanner.close();
 	}
 	
-	public static void crearUsuario() {
+	public static void crearUsuario(String id) {
 		// tomar datos del usuario, es decir: username y password. 
 		//y guardarlo en archivo de texto archivo_usuarios.txt
 		
@@ -89,7 +91,7 @@ public class PersonaCommandLine {
 		
 		Usuario usuario = new Usuario();
 		
-		usuario.setId(UUID.randomUUID().toString());
+		usuario.setId(id);
 		
 		usuario.setUserName(userName);
 		
@@ -99,6 +101,6 @@ public class PersonaCommandLine {
 		registrationService.crearUsuario(usuario);
 		System.out.println("Ya se ha creado un nuevo usuario");
 		
-		
+		scanner.close();
 	}
 }

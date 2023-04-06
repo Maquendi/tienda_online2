@@ -15,12 +15,16 @@ import modelo.Usuario;
 import service.PersonRegistrationService;
 
 public class Application {
-
 	
 	
 	public static void main(String[] args) {
 		
-		CommandLineApplication.init();
+		try {
+			CommandLineApplication.init();
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	
