@@ -3,12 +3,12 @@ package app.commandline;
 import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.UUID;
-
 import modelo.Persona;
+import modelo.Usuario;
 import service.PersonRegistrationService;
 
 public class PersonaCommandLine {
-
+	
 	
 	public static void registrar() {
 		
@@ -74,7 +74,30 @@ public class PersonaCommandLine {
 	}
 	
 	public static void crearUsuario() {
-		// tomar datos del usuario, es decir: username y password. y guardarlo en archivo de texto archivo_usuarios.txt
+		// tomar datos del usuario, es decir: username y password. 
+		//y guardarlo en archivo de texto archivo_usuarios.txt
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Usuario:" );
+		
+		String userName = scanner.nextLine();
+		
+		System.out.println("Contraseña: ");
+		
+		String passWord = scanner.nextLine();
+		
+		Usuario usuario = new Usuario();
+		
+		usuario.setId(UUID.randomUUID().toString());
+		
+		usuario.setUserName(userName);
+		
+		usuario.setPassword(passWord);
+		
+		PersonRegistrationService registrationService = new PersonRegistrationService();
+		registrationService.crearUsuario(usuario);
+		System.out.println("Ya se ha creado un nuevo usuario");
 		
 		
 	}

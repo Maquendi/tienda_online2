@@ -3,3 +3,7 @@
 4ea38fb6-6ca7-4721-a73f-0aa9e949cab6,Yefri,Feliz,Guillen,M,2010-05-15,felizguillen@gmail.com
 4ea38fb6-6ca7-4721-a73f-0aa9e949cab2,Maquendi,Beltran,Novas,M,1989-04-25,mbn04251989@gmail.com
 11c35267-1434-439a-a9ee-79ec9df1037e,Yessenia,Feliz,Guillen,F,2010-06-22,yessenia@felizguillen.com
+c3ad8e16-429e-4e76-93d0-134e1ecf3776,yefri,feliz,guillen,M,2003-03-12,felizguillenyefri@gmail.com
+ea6822ac-f7c3-4aef-a519-4ca70a359f04,yessenia,feliz,guillen,F,2003-03-01,yessi0312@gmail.com
+3eaab3f5-4d34-4a44-ac39-f06d7bca4371,yessenia,feliz,guillen,F,2002-03-12,yessi342@gmail.com
+d6e29d50-289c-4f37-8862-0f3d2e161b4f,Diana,Beltran,Sanchez,F,2006-12-06,dianabs45@gmail.com
