@@ -23,3 +23,6 @@ ff9c88bd-d44f-448c-a947-d1ab11fe1ee1,maqbel,hellosaturn
 6919860b-26c6-4651-a662-2f170431322f,ramoncito,matias
 af577183-2f54-4da7-9c66-0a930563fe71,arturito,mysecretpassword
 fc3a3198-c7d1-486d-8ba7-b2a0fc326a25,dorit,dora
+7f1e699e-a5f8-44b1-b623-343b823a64cc,edrita,personal
+a2f96ba1-fcc2-4969-9a01-79506db47d6e,seba,privado
+a6fe4ceb-e9ee-4764-b6df-ddc750057823,samuelito,mi_vida_es_mia

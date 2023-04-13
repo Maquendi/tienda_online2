@@ -10,7 +10,7 @@ public class CategoriaProductoRegistrationService {
 
 	private final EscritorDeArchivoDeTexto escritor;
 	
-	private static final String ARCHIVO_CATEGORIA_PRODUCTO="categoria_producto";
+	private static final String ARCHIVO_CATEGORIA_PRODUCTO="archivo_categoria_producto";
 	
 	public CategoriaProductoRegistrationService(){
 		this.escritor = new EscritorDeArchivoDeTexto();

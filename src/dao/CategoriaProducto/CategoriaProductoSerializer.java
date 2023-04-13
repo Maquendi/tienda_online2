@@ -17,10 +17,11 @@ public class CategoriaProductoSerializer implements Serializador{
 		
 		final var SEPARATOR = ",";
 		
-		var CategoriaProductoStringBuilder = new StringBuilder();
+		var categoriaProductoStringBuilder = new StringBuilder();
 		
-		return CategoriaProductoStringBuilder
+		return categoriaProductoStringBuilder
 				.append(categoriaProducto.getId())
+				.append(SEPARATOR)
 				.append(categoriaProducto.getNombreDeCategoria())
 				.toString();
 	}

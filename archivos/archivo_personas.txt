@@ -29,3 +29,6 @@ ff9c88bd-d44f-448c-a947-d1ab11fe1ee1,Maquendi,Beltran,Novas,M,2010-10-24,mbn@maq
 6919860b-26c6-4651-a662-2f170431322f,Jorge,Matias,Ramon,M,1999-04-03,ramonmatias@gmail.com
 af577183-2f54-4da7-9c66-0a930563fe71,Miguel,Arturo,Vasquez,M,2000-11-30,miguelav@gmail.com
 fc3a3198-c7d1-486d-8ba7-b2a0fc326a25,DORA,FELIZ,GUILLEN,F,2019-10-01,DORITA23@gmail.com
+7f1e699e-a5f8-44b1-b623-343b823a64cc,edra,soto,hernandez,F,2001-02-15,edritash@gmail.com
+a2f96ba1-fcc2-4969-9a01-79506db47d6e,sebastian,mejia,ortiz,M,1987-05-23,mejiasebastian@gmail.com
+a6fe4ceb-e9ee-4764-b6df-ddc750057823,Hector,Samuel,Mejia,M,1999-02-01,hectorsm@gmail.com
