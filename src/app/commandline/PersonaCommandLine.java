@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
+
+import modelo.CategoriaProducto;
 import modelo.Persona;
 import modelo.Usuario;
+import service.CategoriaProductoRegistrationService;
 import service.PersonRegistrationService;
 
 public class PersonaCommandLine {
-	
 	
 	public static void registrar(Scanner scanner) {
 		
@@ -95,7 +97,6 @@ public class PersonaCommandLine {
 	 * @param id
 	 */
 	public static void crearUsuario(Scanner scanner, String id) {
-
 		
 		System.out.println("Usuario:" );
 		
