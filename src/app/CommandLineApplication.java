@@ -3,6 +3,7 @@ package app;
 import java.util.Scanner;
 
 import app.commandline.PersonaCommandLine;
+import app.commandline.ProductoCommandLine;
 
 public class CommandLineApplication {
 
@@ -30,7 +31,7 @@ public class CommandLineApplication {
 
 		int opcion;
 
-		System.out.println("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir");
+		System.out.println("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir \n4)Registrar Categoria Producto");
 
 		opcion = Integer.parseInt(scanner.nextLine());
 
@@ -46,6 +47,10 @@ public class CommandLineApplication {
 
 		if (opcion == 3) {
 			 System.exit(0);
+		}
+		
+		if (opcion == 4) {
+			ProductoCommandLine.crearCategoriaProducto(scanner);
 		}
 
 		return opcion;
