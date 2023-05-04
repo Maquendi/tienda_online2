@@ -79,8 +79,6 @@ public class PersonaCommandLine {
 			System.out.println("Ya se ha creado una nueva persona.");
 
 			crearUsuario(scanner, id);
-			crearCategoriaProducto(scanner, id);
-
 		} catch (NumberFormatException e) {
 			System.out.println("El valor de la fecha de nacimiento no es valido.");
 		} catch (IndexOutOfBoundsException e) {
@@ -118,23 +116,4 @@ public class PersonaCommandLine {
 		System.out.println("Ya se ha creado un nuevo usuario");
 	}
 
-	public static void crearCategoriaProducto(Scanner scanner, String id) {
-
-		System.out.println("Categoria Producto: ");
-
-		String NombreCategoriaProducto = scanner.nextLine();
-
-		CategoriaProducto categoriaProducto = new CategoriaProducto();
-
-		categoriaProducto.setId(id);
-
-		categoriaProducto.setNombreDeCategoria(NombreCategoriaProducto);
-
-		CategoriaProductoRegistrationService registrationService = new CategoriaProductoRegistrationService();
-
-		registrationService.crearCategoriaProducto(categoriaProducto);
-
-		System.out.println("Usted ha accedido a una categoria de productos");
-
-	}
 }
