@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Orden implements Serializable{
-
 	/**
 	 * 
 	 */
@@ -18,9 +17,9 @@ public class Orden implements Serializable{
 	
 	private Producto[] productos;
 	
-	public Orden() {}
+	private String clientId; // el id del cliente que esta haciendo la compra.
 	
-
+	public Orden() {}
 
 	public Orden(String id, LocalDate fechaOrden, Producto[] productos) {
 		super();
@@ -81,6 +80,12 @@ public class Orden implements Serializable{
 		return Objects.equals(fechaOrden, other.fechaOrden) && Objects.equals(id, other.id)
 				&& Arrays.equals(productos, other.productos);
 	}
-	
-	
+
+	public String getClientId() {
+		return clientId;
+	}
+
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
+	}
 }

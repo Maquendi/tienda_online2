@@ -5,6 +5,10 @@ import java.util.Objects;
 
 public class Producto implements Serializable{
 	
+	
+	// Laptop dell inspiron, pantalla 15 pulg.
+	// Computadoras,
+	// id=sdfsdf5sdf1sfd44sdfsdfssds
 	/**
 	 * 
 	 */
@@ -62,8 +66,4 @@ public class Producto implements Serializable{
 		return Objects.equals(categoria, other.categoria) && Objects.equals(descripcion, other.descripcion)
 				&& Objects.equals(id, other.id);
 	}
-	
-	
-	
-	
 }
