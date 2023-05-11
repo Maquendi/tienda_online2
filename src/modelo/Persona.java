@@ -10,7 +10,7 @@ public class Persona implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private String email;
-    private String id; // gererar automatico
+    private String id; // generar automatico
 	private String nombre;
 	private String apellidoMaterno;
 	private String apellidoPaterno;

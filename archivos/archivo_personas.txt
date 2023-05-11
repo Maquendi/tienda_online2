@@ -26,3 +26,4 @@ e6283c3b-0259-41e9-a68c-9215369417fc,,am,f,m,2014-01-24,wed
 389dfff1-843a-4920-8a5b-55128eb97c14,Donald,Trump,Trumpet,M,1960-02-16,donaldtrump@trump.org
 ca39e447-b891-4a3c-83dd-201af5527fc6,Hilary,Clington,De clinton,F,1952-01-14,hilarycligton@clington.com
 ff9c88bd-d44f-448c-a947-d1ab11fe1ee1,Maquendi,Beltran,Novas,M,2010-10-24,mbn@maquendi.com
+c0b0293c-616c-4431-a21a-f6418e507f01,miguel,perez,guillen,M,2000-03-03,migueleperez@gmail.com
