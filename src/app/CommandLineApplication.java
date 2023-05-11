@@ -2,6 +2,7 @@ package app;
 
 import java.util.Scanner;
 
+import app.commandline.AdminCommandLine;
 import app.commandline.PersonaCommandLine;
 import app.commandline.ProductoCommandLine;
 
@@ -31,7 +32,8 @@ public class CommandLineApplication {
 
 		int opcion;
 
-		System.out.println("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir \n4)Registrar Categoria Producto ");
+		System.out.print("Seleciona una opcion : \n1)Registrarse \n2)Hacer Login \n3)Salir "
+				+ "\n4)Registrar Categoria Producto. \n5) Crear privilegio");
 
 		opcion = Integer.parseInt(scanner.nextLine());
 
@@ -53,6 +55,9 @@ public class CommandLineApplication {
 			ProductoCommandLine.crearCategoriaProducto(scanner);
 		}
 		
+		if (opcion == 5) {
+			AdminCommandLine.crearPrivilegio(scanner);
+		}
 		
 
 		return opcion;

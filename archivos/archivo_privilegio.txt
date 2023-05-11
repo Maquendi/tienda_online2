@@ -1,0 +1,3 @@
+5a418fa0-07bc-40f3-b899-4952195dd8e8,Comerciante
+644cfaa3-02fb-44e2-94fa-1c66da8c9c2f,Admin
+a062f0a7-8116-419b-b175-676249ce0276,Cliente
