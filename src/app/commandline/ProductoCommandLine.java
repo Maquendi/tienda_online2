@@ -28,5 +28,23 @@ public class ProductoCommandLine {
 		registrationService.crearCategoriaProducto(categoriaProducto);
 
 		System.out.println("Se ha creado una nueva categoria de productos con nombre: " + nombreCategoriaProducto);
+		
+		
+	}
+	
+	public static void crearProducto(Scanner scanner) {
+		
+		String id = UUID.randomUUID().toString();
+		
+		System.out.println("Descripcion del producto: ");
+		
+		String descripcionProducto = scanner.nextLine();
+		
+		System.out.println("Categoria del producato: ");
+		
+		//todo: pendiente cargar todas las categorias de producto ya 
+		//registradas y presentarselo al usuario como un menu
+		
+		
 	}
 }
