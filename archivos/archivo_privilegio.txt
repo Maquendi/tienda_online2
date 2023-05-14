@@ -1,0 +1,8 @@
+de8ce831-c086-4496-9dd1-514bd7648036,comerciante
+a630d329-eb07-4ea5-b5c4-0e841a247f6b,prestamista
+57e99cdb-5aed-4fcf-a5cb-2e64115eaf22,Cliente
+9626b7f3-f9ee-48d3-a65a-5b7bd509f2f5,Admin
+d607526d-319f-4ada-87ad-5d75e9bcae7b,admis
+1a376d30-2a9d-40a5-bbaf-6e18e6cec225,laliga
+14aac594-0362-4416-a85d-930dfbaf396f,administrador
+233c3f07-822d-49af-9cca-d4ba7bbaa311,lkajdlkajd;lk

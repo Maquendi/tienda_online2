@@ -3,3 +3,4 @@ cc4ad9ed-6f3b-489a-b430-064bd549f8bf,Computadoras
 f980ace5-a25d-4ea0-b135-dc1a5c46b700,Smart phones
 0fdb6f8e-8dc7-42dd-8304-8daf40fcae93,Aire Acondicionado
 a13a5dff-82a2-4821-90b2-411318586a8b,electrodomesticos
+b3fee25b-9b2f-4ba5-9641-f4c52ac6b86b,muebles
