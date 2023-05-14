@@ -21,11 +21,11 @@ public class CuentaBancariaSerializer implements Serializador {
 		return cuentaBancariaStringBuilder
 				.append(cuentaBancaria.getClienteId())
 				.append(SEPARATOR)
-				.append(cuentaBancaria.getSaldo())
-				.append(SEPARATOR)
 				.append(cuentaBancaria.getNombreBanco())
 				.append(SEPARATOR)
 				.append(cuentaBancaria.getTipoCuenta())
+				.append(SEPARATOR)
+				.append(cuentaBancaria.getNumDeCuenta())
 				.toString();
 		
 	}

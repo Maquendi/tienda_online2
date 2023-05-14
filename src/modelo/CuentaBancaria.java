@@ -6,8 +6,6 @@ import java.util.Objects;
 public class CuentaBancaria implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-
-	private double saldo; 
 	
 	private String nombreBanco;
 	
@@ -15,25 +13,16 @@ public class CuentaBancaria implements Serializable{
 	
 	private int clienteId;
 	
-	Cliente cliente;
+	private String numDeCuenta;
 	
 	public CuentaBancaria() {}
 
-	public CuentaBancaria(double saldo, String nombreBanco, String tipoCuenta, int clienteId, Cliente cliente) {
+	public CuentaBancaria(String nombreBanco, String tipoCuenta, int clienteId, String numDeCuenta) {
 		super();
-		this.saldo = saldo;
 		this.nombreBanco = nombreBanco;
 		this.tipoCuenta = tipoCuenta;
 		this.clienteId = clienteId;
-		this.cliente = cliente;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
+		this.numDeCuenta = numDeCuenta;
 	}
 
 	public String getNombreBanco() {
@@ -60,23 +49,23 @@ public class CuentaBancaria implements Serializable{
 		this.clienteId = clienteId;
 	}
 	
-	public Cliente getCliente() {
-		return cliente;
+	public String getNumDeCuenta() {
+		return numDeCuenta;
 	}
 	
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setNumDeCuenta(String numDeCuenta) {
+		this.numDeCuenta = numDeCuenta;
 	}
 
 	@Override
 	public String toString() {
-		return "CuentaBancaria [saldo=" + saldo + ", nombreBanco=" + nombreBanco + ", tipoCuenta=" + tipoCuenta
-				+ ", clienteId=" + clienteId + ", cliente=" + cliente + "]";
+		return "CuentaBancaria [nombreBanco=" + nombreBanco + ", tipoCuenta=" + tipoCuenta
+				+ ", clienteId=" + clienteId + ", numero de cuenta=" + numDeCuenta + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cliente, clienteId, nombreBanco, saldo, tipoCuenta);
+		return Objects.hash(clienteId, nombreBanco, numDeCuenta, tipoCuenta);
 	}
 
 	@Override
@@ -88,10 +77,9 @@ public class CuentaBancaria implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		CuentaBancaria other = (CuentaBancaria) obj;
-		return Objects.equals(cliente, other.cliente) && clienteId == other.clienteId
-				&& Objects.equals(nombreBanco, other.nombreBanco)
-				&& Double.doubleToLongBits(saldo) == Double.doubleToLongBits(other.saldo)
-				&& Objects.equals(tipoCuenta, other.tipoCuenta);
+		return clienteId == other.clienteId && Objects.equals(nombreBanco, other.nombreBanco)
+				&& numDeCuenta == other.numDeCuenta && Objects.equals(tipoCuenta, other.tipoCuenta);
 	}
+
 	
 }
