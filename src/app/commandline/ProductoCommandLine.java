@@ -40,7 +40,7 @@ public class ProductoCommandLine {
 		
 		String descripcionProducto = scanner.nextLine();
 		
-		System.out.println("Categoria del producato: ");
+		System.out.println("Categoria del producto: ");
 		
 		//todo: pendiente cargar todas las categorias de producto ya 
 		//registradas y presentarselo al usuario como un menu
