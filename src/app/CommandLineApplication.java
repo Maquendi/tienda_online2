@@ -5,7 +5,7 @@ import java.util.Scanner;
 import app.commandline.PersonaCommandLine;
 import app.commandline.ProductoCommandLine;
 import app.commandline.AdminCommandLine;
-import app.commandline.CuentaBancariaCommandLine;
+import app.commandline.*;
 
 public class CommandLineApplication {
 

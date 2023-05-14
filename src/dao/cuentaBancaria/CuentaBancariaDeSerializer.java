@@ -20,6 +20,7 @@ public class CuentaBancariaDeSerializer implements DeSerializer{
 		cliente.setId(atributosCuentaBancaria[0]);
 		cuentaBancaria.setNombreBanco(atributosCuentaBancaria[1]);
 		cuentaBancaria.setTipoCuenta(atributosCuentaBancaria[2]);
+		cuentaBancaria.setNumDeCuenta(atributosCuentaBancaria[3]);
 		
 		return cuentaBancaria;
 		

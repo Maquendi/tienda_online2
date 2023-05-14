@@ -7,9 +7,12 @@ import java.util.Scanner;
 import java.util.UUID;
 
 import modelo.CategoriaProducto;
+import modelo.Cliente;
+import modelo.CuentaBancaria;
 import modelo.Persona;
 import modelo.Usuario;
 import service.CategoriaProductoRegistrationService;
+import service.CuentaBancariaRegistrationService;
 import service.PersonRegistrationService;
 
 public class PersonaCommandLine {

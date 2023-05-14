@@ -13,13 +13,16 @@ public class CuentaBancaria implements Serializable{
 	
 	private int clienteId;
 	
+	private String numDeCuenta;
+	
 	public CuentaBancaria() {}
 
-	public CuentaBancaria(String nombreBanco, String tipoCuenta, int clienteId) {
+	public CuentaBancaria(String nombreBanco, String tipoCuenta, int clienteId, String numDeCuenta) {
 		super();
 		this.nombreBanco = nombreBanco;
 		this.tipoCuenta = tipoCuenta;
 		this.clienteId = clienteId;
+		this.numDeCuenta = numDeCuenta;
 	}
 
 	public String getNombreBanco() {
@@ -45,16 +48,24 @@ public class CuentaBancaria implements Serializable{
 	public void setClienteId(int clienteId) {
 		this.clienteId = clienteId;
 	}
+	
+	public String getNumDeCuenta() {
+		return numDeCuenta;
+	}
+	
+	public void setNumDeCuenta(String numDeCuenta) {
+		this.numDeCuenta = numDeCuenta;
+	}
 
 	@Override
 	public String toString() {
 		return "CuentaBancaria [nombreBanco=" + nombreBanco + ", tipoCuenta=" + tipoCuenta
-				+ ", clienteId=" + clienteId +"]";
+				+ ", clienteId=" + clienteId + ", numero de cuenta=" + numDeCuenta + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(clienteId, nombreBanco, tipoCuenta);
+		return Objects.hash(clienteId, nombreBanco, numDeCuenta, tipoCuenta);
 	}
 
 	@Override
@@ -67,7 +78,7 @@ public class CuentaBancaria implements Serializable{
 			return false;
 		CuentaBancaria other = (CuentaBancaria) obj;
 		return clienteId == other.clienteId && Objects.equals(nombreBanco, other.nombreBanco)
-				&& Objects.equals(tipoCuenta, other.tipoCuenta);
+				&& numDeCuenta == other.numDeCuenta && Objects.equals(tipoCuenta, other.tipoCuenta);
 	}
 
 	
