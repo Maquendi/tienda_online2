@@ -9,7 +9,7 @@ public class CuentaBancariaCommandLine {
 
 	public static void registrar(Scanner scanner) {
 		
-		System.out.print("Nombre banco: ");
+		System.out.print("Nombre del banco: ");
 		
 		String nombreBanco = scanner.nextLine();
 		
@@ -17,15 +17,11 @@ public class CuentaBancariaCommandLine {
 		
 		String tipoCuenta = scanner.nextLine();
 		
-		System.out.print("Id cliente: ");
-		
-		String clienteId = scanner.nextLine();
-		
 		CuentaBancaria cuentaBancaria = new CuentaBancaria();
 		
 		Cliente cliente = new Cliente();
 		
-		cliente.setId(clienteId);
+		String id = cliente.getId();
 		
 		cuentaBancaria.setNombreBanco(nombreBanco);
 		
@@ -35,7 +31,7 @@ public class CuentaBancariaCommandLine {
 		
 		registrationService.crearCuentaBancaria(cuentaBancaria);
 		
-		System.out.println("Ya se ha creado una nueva Cuenta Bancaria.");
+		System.out.println("Ya se ha registrado una nueva cuenta bancaria.");
 		
 	}
 }

@@ -6,3 +6,4 @@ d607526d-319f-4ada-87ad-5d75e9bcae7b,admis
 1a376d30-2a9d-40a5-bbaf-6e18e6cec225,laliga
 14aac594-0362-4416-a85d-930dfbaf396f,administrador
 233c3f07-822d-49af-9cca-d4ba7bbaa311,lkajdlkajd;lk
+17ba2210-e2a6-449f-a707-fed3c99f7a03,comerciante

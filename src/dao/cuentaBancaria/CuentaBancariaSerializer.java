@@ -24,6 +24,8 @@ public class CuentaBancariaSerializer implements Serializador {
 				.append(cuentaBancaria.getNombreBanco())
 				.append(SEPARATOR)
 				.append(cuentaBancaria.getTipoCuenta())
+				.append(SEPARATOR)
+				.append(cuentaBancaria.getNumDeCuenta())
 				.toString();
 		
 	}
