@@ -2,6 +2,8 @@ package dao.privilegio;
 import modelo.Privilegio;
 import dao.compartido.Serializador;
 
+
+// implementacion
 public class PrivilegioSerializer implements Serializador{
 
 	private final Privilegio privilegio;

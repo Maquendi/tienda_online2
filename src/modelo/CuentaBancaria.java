@@ -7,7 +7,7 @@ public class CuentaBancaria implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	private double saldo;
+	private double saldo; 
 	
 	private String nombreBanco;
 	
