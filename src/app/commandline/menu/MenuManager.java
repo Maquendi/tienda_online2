@@ -122,6 +122,8 @@ public class MenuManager {
 		displayCurrentMenu();
 	}
 
+	
+	// make this itempotent
 	private void addMenu(Menu menu) {
 		    //               0  1  2  3
             // indice/index [41,58,96,13]
@@ -131,5 +133,14 @@ public class MenuManager {
 		if (hasPrevious()) {
 			menu.addMenuItemBefore(new MenuItem("Previous", this.onPreviousSelected()));
 		}
+		
+		menu.addMenuItem(new MenuItem("Salir", this::salir));
+	}
+	
+	
+	private void salir(Scanner scanner) {
+		//
+		System.out.println("Saliendo del sistema ....");
+		System.exit(0);
 	}
 }

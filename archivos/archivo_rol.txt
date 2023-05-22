@@ -1,8 +1,4 @@
-akldjlkaj,comerciante
-14f30f61-d315-49b3-8da0-26bab050c3e9,mensajero
-ba17dba8-caaf-4dcb-8f39-a5692677824e,ahodra
-e11a2f69-f81f-4c06-a3a2-82a6838a9943,jdklaj;lkdjl
-20fcba65-4597-4853-914c-4d9012266983,dklja;lkdj
-7b8b2490-925f-490a-b167-0502345a69a7,kladjlkajdlkj;a
-09032d56-3a3b-453d-8684-41178e0c270b,;kdaljdkljad
-90d5c982-b919-4def-9a4b-e7577d50ca30,ayudante
+20fcba65-4597-4853-914c-4d9012266983,Comerciante
+14f30f61-d315-49b3-8da0-26bab050c3e9,Mensajero
+ba17dba8-caaf-4dcb-8f39-a5692677824e,Admin
+e11a2f69-f81f-4c06-a3a2-82a6838a9943,Cliente

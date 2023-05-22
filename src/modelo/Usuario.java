@@ -6,7 +6,7 @@ import java.util.Objects;
 
 //pojo -->> plain old java object....
 //Dto -- >>  data transfer object....
-public class Usuario extends Persona implements Serializable{
+public class Usuario implements Serializable{
 
 	/**
 	 * 

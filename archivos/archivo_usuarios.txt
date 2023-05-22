@@ -1,15 +1,5 @@
 aee002ab-7586-46b0-a81f-4d1e1ba5b459,maquendi,my_secret_password
-null,yessi,12345
 318efa09-ca38-4076-b9e6-f074905cb19f,dianita,tiktok
-null,dannies,chipi y dora
-null,dannies,chipi y dora
-null,mbp,real madrid
-null,,mili
-null,robertico,85793l
-null,victor,my_secret_contrasena
-null,yefri,felizguillen
-null,yefrii,feliz
-null,dianita,feliz
 32e303a8-75a5-42b7-8c9f-2a31d819e389,dieguito,diego01
 fa6f3c6c-2bdb-4c6c-8733-1bf1d36c6e58,yesii,family
 a65ccebd-a194-474c-83e8-1a95bff0bf1e,MAQUENDI,HELLOWORLD
