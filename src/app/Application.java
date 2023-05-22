@@ -3,6 +3,7 @@ package app;
 import java.util.Scanner;
 import app.commandline.UserCommandLineService;
 import app.commandline.menu.MenuManager;
+import dao.compartido.LectorDeArchivoDeTexto;
 import service.user.DefaultUserServiceImpl;
 
 public class Application {
@@ -14,7 +15,9 @@ public class Application {
 
 			var menuManager = new MenuManager(new Scanner(System.in));
 			
-			var userService = new DefaultUserServiceImpl();
+			// LectorDeArchivoWord
+			
+			var userService = new DefaultUserServiceImpl(new LectorDeArchivoDeTexto());
 			
 			var userCommandLineService = new UserCommandLineService(menuManager, userService);
 			

@@ -1,10 +1,8 @@
 package service.user;
 
-import java.util.Scanner;
-
 public interface UserService {
 	
-	void doLogin();
+	UserSession doLogin(String nombreUsuario, String contrasena) throws UserNotFoundException, UserDataNotFoundException;
 	
 	void doRegistration();
 }
