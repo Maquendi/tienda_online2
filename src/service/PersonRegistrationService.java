@@ -1,6 +1,6 @@
 package service;
 
-import dao.compartido.Archivo;
+import dao.compartido.Linea;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import dao.persona.PersonSerializer;
 import dao.usuario.UsuarioSerializer;
@@ -21,25 +21,29 @@ public class PersonRegistrationService {
 	}
 	
 	public boolean crearPersona(Persona persona) {
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_PERSONAS);
+		Linea archivoTexto = new Linea();
 		PersonSerializer serializer = new PersonSerializer(persona);
 		String personaValor = serializer.serializar();
 		archivoTexto.setContenido(personaValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_PERSONAS, archivoTexto);
 		return true;
 	}
 	
 	public boolean crearUsuario(Usuario usuario) {
-		
-		// implementar...
-		
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_USUARIOS);
+		var linea = convertir(usuario);
+		escritor.escribir(ARCHIVO_USUARIOS, linea);
+		return true;
+	}
+	
+	
+	public Linea convertir(Usuario usuario) {
+	
+		Linea archivoTexto = new Linea();
 		UsuarioSerializer serializer = new UsuarioSerializer(usuario);
 		String UsuarioValor = serializer.serializar();
 		archivoTexto.setContenido(UsuarioValor);
-		escritor.crear(archivoTexto);
-		return true;
+		
+		return archivoTexto;
 	}
+	
 }

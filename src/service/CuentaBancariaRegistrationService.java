@@ -1,6 +1,6 @@
 package service;
 
-import dao.compartido.Archivo;
+import dao.compartido.Linea;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import modelo.CuentaBancaria;
 import dao.cuentaBancaria.*;
@@ -16,12 +16,11 @@ public class CuentaBancariaRegistrationService {
 	}
 	
 	public boolean crearCuentaBancaria(CuentaBancaria cuentaBancaria) {
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_CUENTA_BANCARIA);
+		Linea archivoTexto = new Linea();
 		CuentaBancariaSerializer serializer = new CuentaBancariaSerializer(cuentaBancaria);
 		String cuentaBancariaValor = serializer.serializar();
 		archivoTexto.setContenido(cuentaBancariaValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_CUENTA_BANCARIA, archivoTexto);
 		return true;
 		
 	}

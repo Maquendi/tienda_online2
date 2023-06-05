@@ -1,6 +1,6 @@
 package service;
 
-import dao.compartido.Archivo;
+import dao.compartido.Linea;
 
 import dao.privilegio.*;
 import dao.rol.RolSerializer;
@@ -25,8 +25,7 @@ public class PrivilegioRegistrationService {
 	
 	public boolean crearPrivilegio(Privilegio privilegio) {
 		
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_PRIVILEGIO);
+		Linea archivoTexto = new Linea();
         Serializador serializer = new PrivilegioSerializer(privilegio);
 		serializer.serializar();
 		String privilegioValor = serializer.serializar();
@@ -34,17 +33,16 @@ public class PrivilegioRegistrationService {
 		
 		
 		archivoTexto.setContenido(privilegioValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_PRIVILEGIO,archivoTexto);
 		return true;
 	}
 	
 	public boolean crearRol(Rol rol) {
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_ROL);
+		Linea archivoTexto = new Linea();
 		RolSerializer serializer = new RolSerializer(rol);
 		String rolValor = serializer.serializar();
 		archivoTexto.setContenido(rolValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_ROL, archivoTexto);
 		return true;
 	}
 }

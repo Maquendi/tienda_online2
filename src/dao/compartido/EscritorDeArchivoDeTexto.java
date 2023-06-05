@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class EscritorDeArchivoDeTexto implements EscritorDeArchivo{
 
@@ -12,19 +15,17 @@ public class EscritorDeArchivoDeTexto implements EscritorDeArchivo{
 	 * 
 	 */
 	@Override
-	public void crear(Archivo archivo) {
+	public void escribir(String nombreArchivo, Linea linea) {
 		
 		String basePath = this.getBasePath();
 		
-		String nombreArchivo = archivo.getNombreArchivo();
-		
 		String rutaCompleta = basePath + "\\" + nombreArchivo + ".txt";
 		
-		appendUsingPrintWriter(rutaCompleta, archivo.getContenido());
+		appendUsingPrintWriter(rutaCompleta, List.of(linea.getContenido()), false);
 	}
 	
 	
-	private void appendUsingPrintWriter(String filePath, String text) {
+	private void appendUsingPrintWriter(String filePath, List<String> lineas, boolean cleanFirst) {
 		File file = new File(filePath);
 		FileWriter fr = null;
 		BufferedWriter br = null;
@@ -33,7 +34,15 @@ public class EscritorDeArchivoDeTexto implements EscritorDeArchivo{
 			fr = new FileWriter(file, true);
 			br = new BufferedWriter(fr);
 			pr = new PrintWriter(br);
-			pr.println(text);
+			
+			if(cleanFirst)
+			{
+				br.write("");	
+			}
+			
+			for(int i=0; i < lineas.size(); i++) {
+				pr.println(lineas.get(i));
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -47,4 +56,18 @@ public class EscritorDeArchivoDeTexto implements EscritorDeArchivo{
 		}
 	}
 
+
+
+	@Override
+	public void escribir(String nombreArchivo, List<Linea> lineas) {
+		
+		String basePath = this.getBasePath();
+		
+		String rutaCompleta = basePath + "\\" + nombreArchivo + ".txt";
+		
+		List<String> listaContenidos = lineas.stream().map(line -> line.getContenido())
+		           .collect(Collectors.toList());
+		
+		appendUsingPrintWriter(rutaCompleta, listaContenidos, true);
+	}
 }

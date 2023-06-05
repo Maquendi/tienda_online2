@@ -1,8 +1,12 @@
 package service.user;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
+import dao.compartido.EscritorDeArchivo;
 import dao.compartido.LectorDeArchivo;
 import dao.persona.PersonDeserializer;
 import dao.rol.RolDeserializer;
@@ -12,11 +16,16 @@ import modelo.Persona;
 import modelo.Rol;
 import modelo.UserRole;
 import modelo.Usuario;
+import service.PersonRegistrationService;
 
 public class DefaultUserServiceImpl implements UserService {
 	// campo,
 	// field
 	private LectorDeArchivo fileReader;
+	
+	private EscritorDeArchivo fileWriter;
+	
+	private PersonRegistrationService registrationService;
 
 	private final String ARCHIVO_USUARIO = "archivo_usuarios";
 
@@ -26,8 +35,10 @@ public class DefaultUserServiceImpl implements UserService {
 
 	private final String ARCHIVO_ROLES_ASIGNADO = "archivo_usuario_rol";
 
-	public DefaultUserServiceImpl(LectorDeArchivo fileReader) {
+	public DefaultUserServiceImpl(LectorDeArchivo fileReader, EscritorDeArchivo fileWriter, PersonRegistrationService registrationService) {
 		this.fileReader = fileReader;
+		this.fileWriter = fileWriter;
+		this.registrationService = registrationService;
 	}
 
 	@Override
@@ -150,4 +161,38 @@ public class DefaultUserServiceImpl implements UserService {
 		System.out.println("You selected Register");
 	}
 
+	@Override
+	public Optional<Persona> getUserByEmail(String email) {
+		
+		Object[] personas = fileReader.leer(ARCHIVO_PERSONA, new PersonDeserializer());
+		
+		List<Object> personaList = Arrays.asList(personas);
+		
+		return personaList.stream()
+		.map(elemAsObject -> (Persona)elemAsObject)
+		.filter(persona -> persona.getEmail().equals(email))
+		.findFirst();
+	}
+
+	@Override
+	public void changePassword(String userId, String password) throws UserNotFoundException {
+		
+		var usuarios = Arrays.asList(fileReader.leer(ARCHIVO_USUARIO, new UsuarioDeserializer()));
+		
+		var optionalUser = usuarios.stream().map(user -> (Usuario)user)
+		        .filter(user -> user.getId().equals(userId))
+		        .findFirst();
+		
+		var theUser = optionalUser.orElseThrow(() -> 
+				new UserNotFoundException("El usuario con id " + userId + " no se encuentra en nuestros registros"));
+		
+		theUser.setPassword(password);
+		
+		
+		var listaLinea = usuarios.stream().map(user -> registrationService.convertir((Usuario)user))
+		       .collect(Collectors.toList());
+		
+		
+		fileWriter.escribir(ARCHIVO_USUARIO, listaLinea);
+	}
 }

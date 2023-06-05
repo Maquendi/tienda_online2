@@ -1,9 +1,13 @@
 package app;
 
 import java.util.Scanner;
-import app.commandline.UserCommandLineService;
+import app.commandline.UserMenuCommandLineService;
 import app.commandline.menu.MenuManager;
+import dao.compartido.EscritorDeArchivo;
+import dao.compartido.EscritorDeArchivoDeTexto;
+import dao.compartido.LectorDeArchivo;
 import dao.compartido.LectorDeArchivoDeTexto;
+import service.PersonRegistrationService;
 import service.user.DefaultUserServiceImpl;
 
 public class Application {
@@ -17,11 +21,15 @@ public class Application {
 			
 			// LectorDeArchivoWord
 			
-			var userService = new DefaultUserServiceImpl(new LectorDeArchivoDeTexto());
+			LectorDeArchivo fileReader = new LectorDeArchivoDeTexto();
+			EscritorDeArchivo fileWriter = new EscritorDeArchivoDeTexto();
+			PersonRegistrationService registrationService = new PersonRegistrationService();
 			
-			var userCommandLineService = new UserCommandLineService(menuManager, userService);
+			var userService = new DefaultUserServiceImpl(fileReader,fileWriter, registrationService);
 			
-			userCommandLineService.displayMenu();
+			var userCommandLineService = new UserMenuCommandLineService(menuManager, userService);
+			
+			userCommandLineService.displayStartMenu();
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
