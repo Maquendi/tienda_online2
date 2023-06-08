@@ -1,23 +1,27 @@
 package app.commandline;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
-import modelo.CategoriaProducto;
-import modelo.Cliente;
-import modelo.CuentaBancaria;
-import modelo.Persona;
-import modelo.Usuario;
+import dao.modelo.CategoriaProducto;
+import dao.modelo.Cliente;
+import dao.modelo.CuentaBancaria;
+import dao.modelo.Usuario;
+import enums.Sexo;
+import dao.modelo.Persona;
 import service.CategoriaProductoRegistrationService;
 import service.CuentaBancariaRegistrationService;
-import service.PersonRegistrationService;
+import service.UserRegistrationService;
+import service.dto.UserDto;
+import service.user.DataCollectionException;
 
 public class PersonaCommandLine {
 
-	public static void registrar(Scanner scanner) {
+	public static UserDto collectPersonalInfo(Scanner scanner) throws DataCollectionException{
 
 		System.out.print("Nombre: ");
 
@@ -40,83 +44,45 @@ public class PersonaCommandLine {
 		String genero = scanner.nextLine();
 
 		System.out.print("Fecha Nacimiento (año,mes,dia): ");
-
+		
 		String fechaNacimeinto = scanner.nextLine();
-
-		Persona persona = new Persona();
-
-		String id = UUID.randomUUID().toString();
-
-		persona.setId(id);
-		persona.setNombre(nombre);
-		persona.setApellidoPaterno(appelidoPaterno);
-		persona.setApellidoMaterno(appelidoMaterno);
-		persona.setEmail(correo);
-		persona.setSexo(genero);
-		// 1989, 04, 25.
-
+			
+		UserDto personalInfo = new UserDto();
+		
 		try {
-			// hdsf,dsfue,dfuyse.
-			// "" -->> []
-
-			// "2007,02,25" -->> [2007,02,25]
-
-			// "2007,02" -->> [2007,02]
-
-			// Checked exception
-			// Unchecked exception
-
-			// 1: Exception
-
-			// 2: RuntimeException
-
+			personalInfo.setName(nombre);
+			personalInfo.setMyFirstLastname(appelidoPaterno);
+			personalInfo.setMySecondLastname(appelidoMaterno);
+			personalInfo.setEmailAdress(correo);
+			personalInfo.setSex(genero);
 			String[] datosDeNacimiento = fechaNacimeinto.split(",");
 			int ano = Integer.valueOf(datosDeNacimiento[0]);
 			int mes = Integer.valueOf(datosDeNacimiento[1]);
 			int dia = Integer.valueOf(datosDeNacimiento[2]);
+			
 			LocalDate fechaDeNacimiento = LocalDate.of(ano, mes, dia);
-			persona.setFechaDeNacimiento(fechaDeNacimiento);
-			PersonRegistrationService registrationService = new PersonRegistrationService();
+			personalInfo.setMyDateOfBirth(fechaDeNacimiento);
+			
+			System.out.print("Usuario: ");
 
-			registrationService.crearPersona(persona);
-			System.out.println("Ya se ha creado una nueva persona.");
+			String userName = scanner.nextLine();
 
-			crearUsuario(scanner, id);
+			System.out.print("Contraseña: ");
+
+			String passWord = scanner.nextLine();
+
+			personalInfo.setUserName(userName);
+
+			personalInfo.setPassword(passWord);
+
+			return personalInfo;
+			
 		} catch (NumberFormatException e) {
-			System.out.println("El valor de la fecha de nacimiento no es valido.");
+			throw new DataCollectionException("El formato de la fecha de nacimiento no es valido.");
 		} catch (IndexOutOfBoundsException e) {
-			System.out.println("El formato de la fecha de nacimiento no es valido.");
+			throw new DataCollectionException("El formato de la fecha de nacimiento no es valido.");
+		}catch(DateTimeException e) {
+			throw new DataCollectionException("El formato de la fecha de nacimiento no es valido.");
 		}
 	}
-
-	/**
-	 * tomar datos del usuario, es decir: username y password. y guardarlo en
-	 * archivo de texto archivo_usuarios.txt
-	 * 
-	 * @param scanner
-	 * @param id
-	 */
-	public static void crearUsuario(Scanner scanner, String id) {
-
-		System.out.println("Usuario:");
-
-		String userName = scanner.nextLine();
-
-		System.out.println("Contraseña: ");
-
-		String passWord = scanner.nextLine();
-
-		Usuario usuario = new Usuario();
-
-		usuario.setId(id);
-
-		usuario.setUserName(userName);
-
-		usuario.setPassword(passWord);
-
-		PersonRegistrationService registrationService = new PersonRegistrationService();
-		registrationService.crearUsuario(usuario);
-		System.out.println("Ya se ha creado un nuevo usuario");
-	}
-
 }

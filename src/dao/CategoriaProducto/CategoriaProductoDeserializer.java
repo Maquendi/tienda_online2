@@ -1,7 +1,7 @@
 package dao.CategoriaProducto;
 
 import dao.compartido.DeSerializer;
-import modelo.CategoriaProducto;
+import dao.modelo.CategoriaProducto;
 
 public class CategoriaProductoDeserializer implements DeSerializer{
 

@@ -1,8 +1,8 @@
 package service;
 
 import dao.compartido.Linea;
+import dao.modelo.Producto;
 import dao.compartido.EscritorDeArchivoDeTexto;
-import modelo.Producto;
 import dao.producto.*;
 
 public class ProductoRegistrationService {

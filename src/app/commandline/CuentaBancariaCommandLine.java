@@ -1,8 +1,9 @@
 package app.commandline;
 
 import java.util.Scanner;
-import modelo.CuentaBancaria;
-import modelo.Cliente;
+
+import dao.modelo.Cliente;
+import dao.modelo.CuentaBancaria;
 import service.CuentaBancariaRegistrationService;
 
 public class CuentaBancariaCommandLine {

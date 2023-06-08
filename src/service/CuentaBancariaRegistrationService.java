@@ -2,8 +2,8 @@ package service;
 
 import dao.compartido.Linea;
 import dao.compartido.EscritorDeArchivoDeTexto;
-import modelo.CuentaBancaria;
 import dao.cuentaBancaria.*;
+import dao.modelo.CuentaBancaria;
 
 public class CuentaBancariaRegistrationService {
 

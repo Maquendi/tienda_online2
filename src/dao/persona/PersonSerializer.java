@@ -1,7 +1,7 @@
 package dao.persona;
 
 import dao.compartido.Serializador;
-import modelo.Persona;
+import dao.modelo.Persona;
 
 public class PersonSerializer implements Serializador {
 
@@ -25,17 +25,17 @@ public class PersonSerializer implements Serializador {
 		return personStringBuilder
 				.append(persona.getId())
 				.append(SEPARATOR)
-				.append(persona.getNombre())
+				.append(persona.getName())
 				.append(SEPARATOR)
-				.append(persona.getApellidoPaterno())
+				.append(persona.getMyFirstLastname())
 				.append(SEPARATOR)
-				.append(persona.getApellidoMaterno())
+				.append(persona.getMySecondLastname())
 				.append(SEPARATOR)
-				.append(persona.getSexo())
+				.append(persona.getSex())
 				.append(SEPARATOR)
-				.append(persona.getFechaDeNacimiento())
+				.append(persona.getMyDateOfBirth())
 				.append(SEPARATOR)
-				.append(persona.getEmail())
+				.append(persona.getEmailAdress())
 				.toString();
 	}
 

@@ -8,15 +8,16 @@ import java.util.stream.Collectors;
 
 import dao.compartido.EscritorDeArchivo;
 import dao.compartido.LectorDeArchivo;
+import dao.modelo.Rol;
+import dao.modelo.UserRole;
+import dao.modelo.Usuario;
 import dao.persona.PersonDeserializer;
 import dao.rol.RolDeserializer;
 import dao.rol.UserRoleDeserializer;
 import dao.usuario.UsuarioDeserializer;
-import modelo.Persona;
-import modelo.Rol;
-import modelo.UserRole;
-import modelo.Usuario;
-import service.PersonRegistrationService;
+import dao.modelo.Persona;
+import service.UserRegistrationService;
+import service.dto.UserDto;
 
 public class DefaultUserServiceImpl implements UserService {
 	// campo,
@@ -25,7 +26,7 @@ public class DefaultUserServiceImpl implements UserService {
 	
 	private EscritorDeArchivo fileWriter;
 	
-	private PersonRegistrationService registrationService;
+	private UserRegistrationService registrationService;
 
 	private final String ARCHIVO_USUARIO = "archivo_usuarios";
 
@@ -35,7 +36,7 @@ public class DefaultUserServiceImpl implements UserService {
 
 	private final String ARCHIVO_ROLES_ASIGNADO = "archivo_usuario_rol";
 
-	public DefaultUserServiceImpl(LectorDeArchivo fileReader, EscritorDeArchivo fileWriter, PersonRegistrationService registrationService) {
+	public DefaultUserServiceImpl(LectorDeArchivo fileReader, EscritorDeArchivo fileWriter, UserRegistrationService registrationService) {
 		this.fileReader = fileReader;
 		this.fileWriter = fileWriter;
 		this.registrationService = registrationService;
@@ -157,8 +158,13 @@ public class DefaultUserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void doRegistration() {
-		System.out.println("You selected Register");
+	public void doRegistration(UserDto userDto) {
+		
+		// validacion de datos.
+		
+		UserRegistrationService registrationService = new UserRegistrationService();
+		registrationService.createUser(userDto);
+		System.out.println("Ya se ha creado una nueva persona.");
 	}
 
 	@Override
@@ -170,7 +176,7 @@ public class DefaultUserServiceImpl implements UserService {
 		
 		return personaList.stream()
 		.map(elemAsObject -> (Persona)elemAsObject)
-		.filter(persona -> persona.getEmail().equals(email))
+		.filter(persona -> persona.getEmailAdress().equals(email))
 		.findFirst();
 	}
 

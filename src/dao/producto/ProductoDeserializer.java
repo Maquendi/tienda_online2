@@ -1,8 +1,8 @@
 package dao.producto;
 
 import dao.compartido.DeSerializer;
-import modelo.Producto;
-import modelo.CategoriaProducto;
+import dao.modelo.CategoriaProducto;
+import dao.modelo.Producto;
 public class ProductoDeserializer implements DeSerializer{
 
 	public Object deSerializar(String linea) {

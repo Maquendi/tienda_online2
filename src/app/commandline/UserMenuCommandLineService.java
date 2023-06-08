@@ -2,11 +2,12 @@ package app.commandline;
 
 import java.util.Optional;
 import java.util.Scanner;
-import modelo.Persona;
+import dao.modelo.Persona;
 
 import app.commandline.menu.Menu;
 import app.commandline.menu.MenuItem;
 import app.commandline.menu.MenuManager;
+import service.user.DataCollectionException;
 import service.user.UserDataNotFoundException;
 import service.user.UserNotFoundException;
 import service.user.UserService;
@@ -14,6 +15,8 @@ import service.user.UserSession;
 import service.user.UserSessionService;
 
 public class UserMenuCommandLineService {
+	
+	//dto == data transfer object
 	
 	private final UserService userService;
 	private final MenuManager menuManager;
@@ -64,11 +67,15 @@ public class UserMenuCommandLineService {
 
 	
 	public void doRegistration(Scanner scanner) {
-		PersonaCommandLine.registrar(scanner);
 		
-
-	
-		//userService.doRegistration();
+		try {
+			var personalInfo = PersonaCommandLine.collectPersonalInfo(scanner);
+			
+			userService.doRegistration(personalInfo);
+			
+		} catch (DataCollectionException e) {
+			System.out.print("Registro fallo con error: ".concat(e.getMessage()));	
+		}
 	}
 	
 	public void recuperarContrasena(Scanner scanner) {

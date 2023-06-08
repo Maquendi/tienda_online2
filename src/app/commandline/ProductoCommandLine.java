@@ -3,7 +3,7 @@ package app.commandline;
 import java.util.Scanner;
 import java.util.UUID;
 
-import modelo.CategoriaProducto;
+import dao.modelo.CategoriaProducto;
 import service.CategoriaProductoRegistrationService;
 
 public class ProductoCommandLine {

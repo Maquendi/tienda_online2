@@ -1,6 +1,6 @@
 package dao.privilegio;
-import modelo.Privilegio;
 import dao.compartido.Serializador;
+import dao.modelo.Privilegio;
 
 
 // implementacion

@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import modelo.Persona;
-import modelo.Rol;
+import dao.modelo.Rol;
+import dao.modelo.Persona;
 
 // pojo .... 
 

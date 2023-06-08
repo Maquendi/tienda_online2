@@ -2,9 +2,9 @@ package service;
 
 import dao.CategoriaProducto.CategoriaProductoSerializer;
 import dao.compartido.Linea;
+import dao.modelo.CategoriaProducto;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import dao.usuario.UsuarioSerializer;
-import modelo.CategoriaProducto;
 
 public class CategoriaProductoRegistrationService {
 

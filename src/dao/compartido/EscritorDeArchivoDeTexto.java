@@ -31,15 +31,16 @@ public class EscritorDeArchivoDeTexto implements EscritorDeArchivo{
 		BufferedWriter br = null;
 		PrintWriter pr = null;
 		try {
-			fr = new FileWriter(file, true);
-			br = new BufferedWriter(fr);
-			pr = new PrintWriter(br);
 			
 			if(cleanFirst)
 			{
-				br.write("");	
+				file.delete();
 			}
 			
+			fr = new FileWriter(file, true);
+			br = new BufferedWriter(fr);
+			pr = new PrintWriter(br);
+						
 			for(int i=0; i < lineas.size(); i++) {
 				pr.println(lineas.get(i));
 			}

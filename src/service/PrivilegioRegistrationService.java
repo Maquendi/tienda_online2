@@ -6,8 +6,8 @@ import dao.privilegio.*;
 import dao.rol.RolSerializer;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import dao.compartido.Serializador;
-import modelo.Privilegio;
-import modelo.Rol;
+import dao.modelo.Privilegio;
+import dao.modelo.Rol;
 import dao.rol.*;
 
 public class PrivilegioRegistrationService {

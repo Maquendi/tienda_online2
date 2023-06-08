@@ -7,7 +7,7 @@ import dao.compartido.EscritorDeArchivo;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import dao.compartido.LectorDeArchivo;
 import dao.compartido.LectorDeArchivoDeTexto;
-import service.PersonRegistrationService;
+import service.UserRegistrationService;
 import service.user.DefaultUserServiceImpl;
 
 public class Application {
@@ -23,7 +23,7 @@ public class Application {
 			
 			LectorDeArchivo fileReader = new LectorDeArchivoDeTexto();
 			EscritorDeArchivo fileWriter = new EscritorDeArchivoDeTexto();
-			PersonRegistrationService registrationService = new PersonRegistrationService();
+			UserRegistrationService registrationService = new UserRegistrationService();
 			
 			var userService = new DefaultUserServiceImpl(fileReader,fileWriter, registrationService);
 			
