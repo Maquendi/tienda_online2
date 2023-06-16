@@ -1,7 +1,7 @@
 package dao.merchant;
 
 import dao.compartido.Serializador;
-import modelo.Merchant;
+import dao.modelo.Merchant;
 
 public class MerchantSerializer implements Serializador{
 

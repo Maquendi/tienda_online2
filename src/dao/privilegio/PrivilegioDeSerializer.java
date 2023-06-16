@@ -1,6 +1,6 @@
 package dao.privilegio;
-import modelo.Privilegio;
 import dao.compartido.DeSerializer;
+import dao.modelo.Privilegio;
 
 public class PrivilegioDeSerializer implements DeSerializer{
 

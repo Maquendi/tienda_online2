@@ -1,8 +1,12 @@
 package dao.compartido;
 
+import java.util.List;
+
 public interface EscritorDeArchivo {
 	
-	void crear(Archivo archivo);
+	void escribir(String nombreArchivo, Linea linea);
+
+	void escribir(String nombreArchivo, List<Linea> linea);
 	
 	default String getBasePath() {
 		final String basePath = System.getProperty("user.dir");

@@ -1,7 +1,6 @@
 package dao.producto;
 import dao.compartido.Serializador;
-
-import modelo.Producto;
+import dao.modelo.Producto;
 
 public class ProductoSerializer implements Serializador {
 

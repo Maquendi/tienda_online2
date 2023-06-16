@@ -1,4 +1,4 @@
-package modelo;
+package dao.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -7,7 +7,6 @@ import java.util.Objects;
 //pojo -->> plain old java object....
 //Dto -- >>  data transfer object....
 public class Usuario implements Serializable{
-
 	/**
 	 * 
 	 */
@@ -24,8 +23,6 @@ public class Usuario implements Serializable{
 		this.id = id;
 		this.password = password;
 	}
-
-
 
 	public String getUserName() {
 		return userName;
@@ -66,7 +63,4 @@ public class Usuario implements Serializable{
 		return Objects.equals(id, other.id) && Objects.equals(password, other.password)
 				&& Objects.equals(userName, other.userName);
 	}
-	
-	
-	
 }

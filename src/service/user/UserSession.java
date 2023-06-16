@@ -2,9 +2,10 @@ package service.user;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
-import modelo.Persona;
-import modelo.Rol;
+import dao.modelo.Rol;
+import dao.modelo.Persona;
 
 // pojo .... 
 
@@ -75,6 +76,22 @@ public class UserSession {
 	public void setUserRoles(List<Rol> userRoles) {
 		this.userRoles = userRoles;
 	}
+	
+	public boolean isAdmin() {
+	  return userRoles.stream().anyMatch(rol -> rol.getNombreRol().equals("Admin"));
+	}
+	
+	public boolean isComerciante() {
+		return userRoles.stream().anyMatch(rol -> rol.getNombreRol().equals("Comerciante"));
+	}
+	
+	public boolean isClient() {
+		return userRoles.stream().anyMatch(rol -> rol.getNombreRol().equals("Cliente"));
+	}
+	
+	public boolean isMensajero() {
+		return userRoles.stream().anyMatch(rol -> rol.getNombreRol().equals("Mensajero"));
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -88,4 +105,11 @@ public class UserSession {
 		return Objects.equals(id, other.id) && Objects.equals(password, other.password)
 				&& Objects.equals(personaInfo, other.personaInfo) && Objects.equals(userName, other.userName);
 	}
+
+	@Override
+	public String toString() {
+		return "UserSession [id=" + id + ", userName=" + userName + ", password=" + password + ", personaInfo="
+				+ personaInfo + ", userRoles=" + userRoles + "]";
+	}
+	
 }

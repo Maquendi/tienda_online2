@@ -1,8 +1,8 @@
 package dao.cuentaBancaria;
 
 import dao.compartido.DeSerializer;
-import modelo.CuentaBancaria;
-import modelo.Cliente;
+import dao.modelo.Cliente;
+import dao.modelo.CuentaBancaria;
 
 public class CuentaBancariaDeSerializer implements DeSerializer{
 

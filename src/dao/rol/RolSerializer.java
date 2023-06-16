@@ -1,7 +1,7 @@
 package dao.rol;
 
 import dao.compartido.Serializador;
-import modelo.Rol;
+import dao.modelo.Rol;
 
 public class RolSerializer implements Serializador{
 

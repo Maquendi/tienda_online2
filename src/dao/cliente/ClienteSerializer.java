@@ -1,7 +1,7 @@
 package dao.cliente;
 
 import dao.compartido.Serializador;
-import modelo.Cliente;
+import dao.modelo.Cliente;
 
 public class ClienteSerializer implements Serializador{
 

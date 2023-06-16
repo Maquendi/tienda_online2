@@ -1,7 +1,7 @@
 package dao.cuentaBancaria;
 
 import dao.compartido.Serializador;
-import modelo.CuentaBancaria;
+import dao.modelo.CuentaBancaria;
 
 public class CuentaBancariaSerializer implements Serializador {
 

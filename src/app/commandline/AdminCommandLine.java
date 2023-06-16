@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 
 import java.util.UUID;
-import modelo.Privilegio;
+
+import dao.modelo.Privilegio;
+import dao.modelo.Rol;
 import service.PrivilegioRegistrationService;
-import modelo.Rol;
 
 public class AdminCommandLine {
 	

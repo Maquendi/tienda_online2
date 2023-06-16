@@ -1,6 +1,6 @@
 package dao.cliente;
-import modelo.Cliente;
 import dao.compartido.DeSerializer;
+import dao.modelo.Cliente;
 
 public class ClienteDeSerializer implements DeSerializer{
 

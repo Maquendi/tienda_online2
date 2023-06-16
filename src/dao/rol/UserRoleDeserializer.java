@@ -1,7 +1,7 @@
 package dao.rol;
 
 import dao.compartido.DeSerializer;
-import modelo.UserRole;
+import dao.modelo.UserRole;
 
 public class UserRoleDeserializer implements DeSerializer {
 

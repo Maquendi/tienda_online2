@@ -1,7 +1,7 @@
 package dao.usuario;
 
 import dao.compartido.DeSerializer;
-import modelo.Usuario;
+import dao.modelo.Usuario;
 
 public class UsuarioDeserializer implements DeSerializer{
 

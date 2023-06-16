@@ -1,7 +1,9 @@
-package modelo;
+package dao.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
+
+import dao.modelo.Persona;
 
 public class Cliente extends Persona implements Serializable{
 
@@ -51,7 +53,5 @@ public class Cliente extends Persona implements Serializable{
 		Cliente other = (Cliente) obj;
 		return Objects.equals(cuentaBancaria, other.cuentaBancaria);
 	}
-	
-	
 	
 }

@@ -1,9 +1,10 @@
 package app;
 
 import java.util.Scanner;
-import app.commandline.UserCommandLineService;
+
+import app.commandline.UserMenuCommandLineService;
 import app.commandline.menu.MenuManager;
-import dao.compartido.LectorDeArchivoDeTexto;
+import dao.user.TextFileUserServiceDao;
 import service.user.DefaultUserServiceImpl;
 
 public class Application {
@@ -11,17 +12,13 @@ public class Application {
 	public static void main(String[] args) {
 
 		try {
-			// CommandLineApplication.init();
-
 			var menuManager = new MenuManager(new Scanner(System.in));
+
+			var userService = new DefaultUserServiceImpl(new TextFileUserServiceDao());
 			
-			// LectorDeArchivoWord
+			var userMenuCommandLineService = new UserMenuCommandLineService(menuManager, userService);
 			
-			var userService = new DefaultUserServiceImpl(new LectorDeArchivoDeTexto());
-			
-			var userCommandLineService = new UserCommandLineService(menuManager, userService);
-			
-			userCommandLineService.displayMenu();
+			userMenuCommandLineService.displayStartMenu();
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

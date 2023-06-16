@@ -1,10 +1,10 @@
 package service;
 
 import dao.CategoriaProducto.CategoriaProductoSerializer;
-import dao.compartido.Archivo;
+import dao.compartido.Linea;
+import dao.modelo.CategoriaProducto;
 import dao.compartido.EscritorDeArchivoDeTexto;
 import dao.usuario.UsuarioSerializer;
-import modelo.CategoriaProducto;
 
 public class CategoriaProductoRegistrationService {
 
@@ -17,12 +17,11 @@ public class CategoriaProductoRegistrationService {
 	}
 	
 	public boolean crearCategoriaProducto(CategoriaProducto categoriaProducto) {
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_CATEGORIA_PRODUCTO);
+		Linea archivoTexto = new Linea();
 		CategoriaProductoSerializer serializer = new CategoriaProductoSerializer(categoriaProducto);
 		String categoriaProductoValor = serializer.serializar();
 		archivoTexto.setContenido(categoriaProductoValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_CATEGORIA_PRODUCTO, archivoTexto);
 		return true;
 	}
 }

@@ -1,4 +1,4 @@
-package modelo;
+package dao.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -12,7 +12,11 @@ public class Rol implements Serializable{
 	private String nombreRol;
 	
 	public Rol() {}
-
+	
+	public Rol(String id) {
+		this.id = id;
+	}
+	
 	public Rol(String id, String nombreRol) {
 		super();
 		this.id = id;

@@ -21,9 +21,7 @@ public class LectorDeArchivoDeTexto implements LectorDeArchivo {
 	
 	
 	public Object[] leerContenido(String nombreArchivo, DeSerializer deSerializer)  { 
-		Archivo archivo = new Archivo();
-		archivo.setNombreArchivo(nombreArchivo);
-		
+		Linea archivo = new Linea();		
 		List<Object> objectosLeidos = new ArrayList<>();
 		
     	String cadena; 

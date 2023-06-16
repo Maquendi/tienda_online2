@@ -1,8 +1,8 @@
 package service;
 
-import dao.compartido.Archivo;
+import dao.compartido.Linea;
+import dao.modelo.Producto;
 import dao.compartido.EscritorDeArchivoDeTexto;
-import modelo.Producto;
 import dao.producto.*;
 
 public class ProductoRegistrationService {
@@ -17,12 +17,11 @@ public class ProductoRegistrationService {
 	
 	public boolean crearProducto(Producto producto) {
 		
-		Archivo archivoTexto = new Archivo();
-		archivoTexto.setNombreArchivo(ARCHIVO_PRODUCTO);
+		Linea archivoTexto = new Linea();
 		ProductoSerializer serializar = new ProductoSerializer(producto);
 		String productoValor = serializar.serializar();
 		archivoTexto.setContenido(productoValor);
-		escritor.crear(archivoTexto);
+		escritor.escribir(ARCHIVO_PRODUCTO,archivoTexto);
 		
 		return true;
 	}

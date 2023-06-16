@@ -1,6 +1,6 @@
 package dao.merchant;
-import modelo.Merchant;
 import dao.compartido.DeSerializer;
+import dao.modelo.Merchant;
 
 public class MerchantDeSerializer implements DeSerializer{
 
